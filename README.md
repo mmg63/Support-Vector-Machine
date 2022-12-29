@@ -153,7 +153,7 @@ In SVM methods, choosing the right kernel is crucial, and finding the best param
 \gamma \in {0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9}
 ```
 
-|DATASET / PARAM|C|GAMMA|KERNEL|ACCURACY|
+|DATASET / PARAM|$C$|$\gamma$|KERNEL|ACCURACY|
 | :-: | :-: | :-: | :-: | :-: |
 |**CIRCLES0.3**|0.25|0.4|RBF|100|
 |**HALFKERNEL**|0.25|0.1|RBF|100|
