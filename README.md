@@ -113,8 +113,9 @@ This approach seeks a non-linear hyperplane as a boundary decision between the c
 ## SVM-R (Radial Basis Function kernel)
 When we want to use the support vector machine for non-linear datasets, it is useful to use the SVM-R for this reason. The Radial Basis Function is the most generalized form of kernelization and is one of the widest usages for measuring distance using the Gaussian Distribution. The RBF function for calculating the distance of two points X1 and X2 is:
 
-
+'''math
 KX1,X2=exp-X1-X222σ2
+'''
 
 Where σ is variance and the nominator equation is our L2-norm or the Euclidean distance. Now, Let d₁₂ be the distance between the two points X₁ and X₂; we can now represent d₁₂ as follows:
 
