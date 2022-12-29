@@ -80,7 +80,8 @@
 
 
 # Code Implementation 
-We created the program using Python 3.7. We used the scikit-learn library [1] to implement the machine learning methods. For this assignment, we import SVC from the SVM (support vector machine) class of the scikit library. The Dataset object stores the names of the datasets as tuples using pandas data frame. We created an ML-methods object to apply the methods to all the datasets. Furthermore, we split the data 80-20 for the training and testing the models. Moreover, we applied a min-max scaler on datasets to simplify the training procedure. We used the kernel parameter to define different kernels and created separate methods for them. We created individual programs (.ipynb) to apply grid-search on each dataset and used SVM-R to find its best parameters and accuracy. We used StratifiedKFold to perform 10-fold cross-validation and report the mean accuracy of all the performances and other desired metrics. Then, we used matplotlib [2] to plot the accuracy & decision boundary of each technique on each dataset. Finally, the source code, including all the generated plots, is available in a GitHub repository ([Link to the repository](https://github.com/danialebrat/Comp_8740/tree/master/Assignment_2)).
+We created the program using Python 3.7. We used the scikit-learn library [1] to implement the machine learning methods. For this assignment, we import SVC from the SVM (support vector machine) class of the scikit library. The Dataset object stores the names of the datasets as tuples using pandas data frame. We created an ML-methods object to apply the methods to all the datasets. Furthermore, we split the data 80-20 for the training and testing the models. Moreover, we applied a min-max scaler on datasets to simplify the training procedure. We used the kernel parameter to define different kernels and created separate methods for them. We created individual programs (.ipynb) to apply grid-search on each dataset and used SVM-R to find its best parameters and accuracy. We used StratifiedKFold to perform 10-fold cross-validation and report the mean accuracy of all the performances and other desired metrics. Then, we used matplotlib [2] to plot the accuracy & decision boundary of each technique on each dataset. Finally, the source code, including all the generated plots, is available in a GitHub repository ([Link to the repository](https://github.com/mmg63/Support-Vector-Machine#_Toc117805882)).
+
 # Accuracy measure for each classifier
 
 
@@ -90,8 +91,10 @@ We created the program using Python 3.7. We used the scikit-learn library [1] to
 |**SVM-P**|85|83|91|76|99|93|
 |**SVM-R**|100|100|100|97|99|94|
 *Table 1. Accuracy measure for each classifier*
+
 # Discussions and comparisons
 The SVM uses various kernels to draw a decision boundary by the farthest point of one class nearest to the other class. Although the kernel computes the distance between each point in the dataset, only the points nearest the decision boundary are needed most of the time. For instance, if we are classifying apples and oranges, then SVM would look at an orange that looks most like an apple and vice versa. In other words, it selects data points in cases which is very close to the boundary and uses that to construct its analysis. Therefore, SVM is different from most other ML algorithms. In this assignment, we implemented three different kernels for SVM, which will be discussed in what follows.
+
 ## SVM-L (Linear kernel)
 In SVM linear kernel, the algorithm ensures the margin distance between points and the classifier line remains at maximum. Support vectors are the points nearest to the classifier line, which works as the core elements in SVM. i.e., Support vectors sustain the whole algorithm. Other points do not contribute to the algorithm. The main classifier line is known as the maximum margin hyperplane. 
 
@@ -104,12 +107,16 @@ Figure 1 shows the performance of the linear kernel regarding computing decision
 |<p>![](./Readme%20Images/Aspose.Words.3bcc7811-4ccd-490b-87ee-9755dc9f822a.001.png)![](./Readme%20Images/Aspose.Words.3bcc7811-4ccd-490b-87ee-9755dc9f822a.002.png)![](./Readme%20Images/Aspose.Words.3bcc7811-4ccd-490b-87ee-9755dc9f822a.003.png)![](./Readme%20Images/Aspose.Words.3bcc7811-4ccd-490b-87ee-9755dc9f822a.004.png)![](./Readme%20Images/Aspose.Words.3bcc7811-4ccd-490b-87ee-9755dc9f822a.005.png)![](./Readme%20Images/Aspose.Words.3bcc7811-4ccd-490b-87ee-9755dc9f822a.006.png)</p><p></p>|
 | :-: |
 *Figure 1. SVM-L decision boundaries for different datasets.*
+
+
 ## SVM-P (polynomial kernel)
 This approach seeks a non-linear hyperplane as a boundary decision between the classes. Unlike the linear kernel, the model transforms the points into a higher dimension using the dot product of the pair points where each point has additional dimensions. These dimensions are derived from the points and their relationship with other points using the polynomial kernel. The kernel solves the non-line problem using a linear classifier in a higher dimension, which is known as the kernel trick. Based on the assumption, the polynomial degree is two. Thus, the SVM will find a curve with a degree of two to draw the decision boundary between classes. Therefore, the model performs well for Gaussian distribution points with a curve line to distinguish classes, as seen in the twogaussians33 dataset (99.25%). Furthermore, the accuracy decreases when the margin for support vectors contains noises that derive from overlapping points. For instance, the model achieved 90.88% accuracy on the twogaussians42 dataset. However, when a polynomial decision line of degree does not exist, the polynomial kernel cannot find the proper curve, and it needs more project the points in higher dimensions. Therefore, a non-linear line from the degree of cannot find the proper boundary for circles0.3 (88.5%), halfkernel (83.5%), moons1 (87.62%), and spiral (72.62%). Although the accuracy seems above expected, we can observe the poor decision boundary using the polynomial kernel in figure 2.
 
 |<p>![](./Readme%20Images/Aspose.Words.3bcc7811-4ccd-490b-87ee-9755dc9f822a.007.png)![](./Readme%20Images/Aspose.Words.3bcc7811-4ccd-490b-87ee-9755dc9f822a.008.png)![](./Readme%20Images/Aspose.Words.3bcc7811-4ccd-490b-87ee-9755dc9f822a.009.png)![](./Readme%20Images/Aspose.Words.3bcc7811-4ccd-490b-87ee-9755dc9f822a.010.png)![](./Readme%20Images/Aspose.Words.3bcc7811-4ccd-490b-87ee-9755dc9f822a.011.png)![](./Readme%20Images/Aspose.Words.3bcc7811-4ccd-490b-87ee-9755dc9f822a.012.png)</p><p></p>|
 | :-: |
 *Figure 2. SVM-P decision boundaries for different datasets.*
+
+
 ## SVM-R (Radial Basis Function kernel)
 When we want to use the support vector machine for non-linear datasets, it is useful to use the SVM-R for this reason. The Radial Basis Function is the most generalized form of kernelization and is one of the widest usages for measuring distance using the Gaussian Distribution. The RBF function for calculating the distance of two points X1 and X2 is:
 
@@ -117,33 +124,30 @@ When we want to use the support vector machine for non-linear datasets, it is us
 K(X1,X2)=exp\Big(-\frac{\|X_1-X_2\|^2}{2\sigma^2}\Big)
 ```
 
-Where σ is variance and the nominator equation is our L2-norm or the Euclidean distance. Now, Let d₁₂ be the distance between the two points X₁ and X₂; we can now represent d₁₂ as follows:
+Where ```math \sigma ``` is variance and the nominator equation is our L2-norm or the Euclidean distance. Now, Let ```math L_{12}``` be the distance between the two points ```math X_1``` and ```math X_2```; we can now represent ```math L_{12}``` as follows:
 
-![Chart
+![Chart Description automatically generated with medium confidence](./Readme%20Images/Aspose.Words.3bcc7811-4ccd-490b-87ee-9755dc9f822a.013.jpeg)
 
-Description automatically generated with medium confidence](./Readme%20Images/Aspose.Words.3bcc7811-4ccd-490b-87ee-9755dc9f822a.013.jpeg)
-
-![Chart
-
-Description automatically generated with low confidence](./Readme%20Images/Aspose.Words.3bcc7811-4ccd-490b-87ee-9755dc9f822a.014.png)When the points are near, the result of the formula is near one, and if  they are far, the result will be approached zero. It is essential to find the right value of 'σ' to decide which points should be considered similar, and this can be demonstrated on a case-by-case basis. When σ = 1, σ² = 1, and the RBF kernel's mathematical equation are as follows:
+![Chart Description automatically generated with low confidence](./Readme%20Images/Aspose.Words.3bcc7811-4ccd-490b-87ee-9755dc9f822a.014.png)When the points are near, the result of the formula is near one, and if  they are far, the result will be approached zero. It is essential to find the right value of 'σ' to decide which points should be considered similar, and this can be demonstrated on a case-by-case basis. When ```math \sigma=1```, ```math \sigma^2 = 1```, and the RBF kernel's mathematical equation are as follows:
 
 
-KX1, X2=exp-X1-X222
-
-![](file:///D:/Users/mustafamohammadi/Library/Group%20Containers/UBF8T346G9.ms/WebArchiveCopyPasteTempFiles/com.microsoft.Word/1\*fQKhSW08gDhTiWHLlWhBcA.png)
-
+```math
+K(X1,X2)=exp\Big(-\frac{\|X_1-X_2\|^2}{2}\Big)
+```
 
 Turn to our datasets and models of use, The best way to use SVM in our datasets is SVM-R. As the plots are taken, we can see that the boundaries identified using SVM-R are more reliable.
 
 |<p>![](./Readme%20Images/Aspose.Words.3bcc7811-4ccd-490b-87ee-9755dc9f822a.015.png)![](./Readme%20Images/Aspose.Words.3bcc7811-4ccd-490b-87ee-9755dc9f822a.016.png)![](./Readme%20Images/Aspose.Words.3bcc7811-4ccd-490b-87ee-9755dc9f822a.017.png)![](./Readme%20Images/Aspose.Words.3bcc7811-4ccd-490b-87ee-9755dc9f822a.018.png)![](./Readme%20Images/Aspose.Words.3bcc7811-4ccd-490b-87ee-9755dc9f822a.019.png)![](./Readme%20Images/Aspose.Words.3bcc7811-4ccd-490b-87ee-9755dc9f822a.020.png)</p><p></p>|
 | :-: |
 *Figure 3 SVM-R decision boundaries for different datasets.*
+
+
 ## Grid search for finding the best parameters
 In SVM methods, choosing the right kernel is crucial, and finding the best parameters leads to great results. Therefore, one of the essential steps for achieving a great result is tuning the parameters. Grid search is an approach that trains various models using different parameters from a defined list of parameters, which leads to the best accuracy. Table 2 shows the best hyperparameters for each dataset. Not surprisingly, the best kernel for all the datasets is RBF. In addition, more information, such as the ROC curve and AUC, is available in the appendix. Finally, the list of parameters is shown is below sets.
 
-C ∊ {0.25, 0.5, 0.75, 1}
+```math C \in \{0.25, 0.5, 0.75, 1\}```
 
-Gamma ∊ {0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9}
+```math \Gamma \in {0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9}```
 
 |DATASET / PARAM|C|GAMMA|KERNEL|ACCURACY|
 | :-: | :-: | :-: | :-: | :-: |
