@@ -262,19 +262,12 @@ In conclusion, the SVM method performs very well if we choose the appropriate ke
 ## ROC curve, AUC, and best parameters for SVM-R
 
 
-|![A picture containing graphical user interface
-
-Description automatically generated](./Readme%20Images/Aspose.Words.3bcc7811-4ccd-490b-87ee-9755dc9f822a.024.png)![A picture containing graphical user interface
-
-Description automatically generated](./Readme%20Images/Aspose.Words.3bcc7811-4ccd-490b-87ee-9755dc9f822a.025.png)![Graphical user interface
-
-Description automatically generated with medium confidence](./Readme%20Images/Aspose.Words.3bcc7811-4ccd-490b-87ee-9755dc9f822a.026.png)![Shape
-
-Description automatically generated with low confidence](./Readme%20Images/Aspose.Words.3bcc7811-4ccd-490b-87ee-9755dc9f822a.027.png)![Shape
-
-Description automatically generated with low confidence](./Readme%20Images/Aspose.Words.3bcc7811-4ccd-490b-87ee-9755dc9f822a.028.png)![Shape
-
-Description automatically generated with low confidence](./Readme%20Images/Aspose.Words.3bcc7811-4ccd-490b-87ee-9755dc9f822a.029.png)|
+|![A picture containing graphical user interfaceDescription automatically generated](./Readme%20Images/Aspose.Words.3bcc7811-4ccd-490b-87ee-9755dc9f822a.024.png)
+![Description automatically generated](./Readme%20Images/Aspose.Words.3bcc7811-4ccd-490b-87ee-9755dc9f822a.025.png)
+![Description automatically generated with medium confidence](./Readme%20Images/Aspose.Words.3bcc7811-4ccd-490b-87ee-9755dc9f822a.026.png)
+![Description automatically generated with low confidence](./Readme%20Images/Aspose.Words.3bcc7811-4ccd-490b-87ee-9755dc9f822a.027.png)
+![Description automatically generated with low confidence](./Readme%20Images/Aspose.Words.3bcc7811-4ccd-490b-87ee-9755dc9f822a.028.png)
+![Description automatically generated with low confidence](./Readme%20Images/Aspose.Words.3bcc7811-4ccd-490b-87ee-9755dc9f822a.029.png)|
 | :- |
 *Figure 6 ROC curve, AUC for each dataset using RBF kernel.*
 
@@ -283,7 +276,13 @@ Description automatically generated with low confidence](./Readme%20Images/Aspos
 ## Classifiers Comparison
 
 
-|![](./Readme%20Images/Aspose.Words.3bcc7811-4ccd-490b-87ee-9755dc9f822a.030.png)![](./Readme%20Images/Aspose.Words.3bcc7811-4ccd-490b-87ee-9755dc9f822a.031.png)![](./Readme%20Images/Aspose.Words.3bcc7811-4ccd-490b-87ee-9755dc9f822a.032.png)![](./Readme%20Images/Aspose.Words.3bcc7811-4ccd-490b-87ee-9755dc9f822a.033.png)![](./Readme%20Images/Aspose.Words.3bcc7811-4ccd-490b-87ee-9755dc9f822a.034.png)![](./Readme%20Images/Aspose.Words.3bcc7811-4ccd-490b-87ee-9755dc9f822a.035.png)|
+|<p>![1](./Readme%20Images/Aspose.Words.3bcc7811-4ccd-490b-87ee-9755dc9f822a.030.png)
+![2](./Readme%20Images/Aspose.Words.3bcc7811-4ccd-490b-87ee-9755dc9f822a.031.png)
+![3](./Readme%20Images/Aspose.Words.3bcc7811-4ccd-490b-87ee-9755dc9f822a.032.png)
+![4](./Readme%20Images/Aspose.Words.3bcc7811-4ccd-490b-87ee-9755dc9f822a.033.png)
+![5](./Readme%20Images/Aspose.Words.3bcc7811-4ccd-490b-87ee-9755dc9f822a.034.png)
+![6](./Readme%20Images/Aspose.Words.3bcc7811-4ccd-490b-87ee-9755dc9f822a.035.png)
+</p>|
 | :- |
 
 *Figure 7 Classifier comparison* 
