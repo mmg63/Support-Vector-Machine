@@ -124,11 +124,11 @@ When we want to use the support vector machine for non-linear datasets, it is us
 K(X1,X2)=exp\Big(-\frac{\|X_1-X_2\|^2}{2\sigma^2}\Big)
 ```
 
-Where ```math \sigma ``` is variance and the nominator equation is our L2-norm or the Euclidean distance. Now, Let ```math L_{12}``` be the distance between the two points ```math X_1``` and ```math X_2```; we can now represent ```math L_{12}``` as follows:
+Where $ \sigma $ is variance and the nominator equation is our L2-norm or the Euclidean distance. Now, Let  $L_{12}$ be the distance between the two points  $X_1$ and $ X_2$; we can now represent $L_{12}$ as follows:
 
 ![Chart Description automatically generated with medium confidence](./Readme%20Images/Aspose.Words.3bcc7811-4ccd-490b-87ee-9755dc9f822a.013.jpeg)
 
-![Chart Description automatically generated with low confidence](./Readme%20Images/Aspose.Words.3bcc7811-4ccd-490b-87ee-9755dc9f822a.014.png)When the points are near, the result of the formula is near one, and if  they are far, the result will be approached zero. It is essential to find the right value of 'σ' to decide which points should be considered similar, and this can be demonstrated on a case-by-case basis. When ```math \sigma=1```, ```math \sigma^2 = 1```, and the RBF kernel's mathematical equation are as follows:
+![Chart Description automatically generated with low confidence](./Readme%20Images/Aspose.Words.3bcc7811-4ccd-490b-87ee-9755dc9f822a.014.png)When the points are near, the result of the formula is near one, and if  they are far, the result will be approached zero. It is essential to find the right value of 'σ' to decide which points should be considered similar, and this can be demonstrated on a case-by-case basis. When $\sigma=1$, $ \sigma^2 = 1$, and the RBF kernel's mathematical equation are as follows:
 
 
 ```math
