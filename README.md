@@ -118,17 +118,17 @@ This approach seeks a non-linear hyperplane as a boundary decision between the c
 
 
 ## SVM-R (Radial Basis Function kernel)
-When we want to use the support vector machine for non-linear datasets, it is useful to use the SVM-R for this reason. The Radial Basis Function is the most generalized form of kernelization and is one of the widest usages for measuring distance using the Gaussian Distribution. The RBF function for calculating the distance of two points X1 and X2 is:
+When we want to use the support vector machine for non-linear datasets, it is useful to use the SVM-R for this reason. The Radial Basis Function is the most generalized form of kernelization and is one of the widest usages for measuring distance using the Gaussian Distribution. The RBF function for calculating the distance of two points $X_1$ and $X2$ is:
 
 ```math
 K(X1,X2)=exp\Big(-\frac{\|X_1-X_2\|^2}{2\sigma^2}\Big)
 ```
 
-Where $ \sigma $ is variance and the nominator equation is our L2-norm or the Euclidean distance. Now, Let  $L_{12}$ be the distance between the two points  $X_1$ and $ X_2$; we can now represent $L_{12}$ as follows:
+Where $\sigma$ is variance and the nominator equation is our L2-norm or the Euclidean distance. Now, Let  $L_{12}$ be the distance between the two points  $X_1$ and $ X_2$; we can now represent $L_{12}$ as follows:
 
 ![Chart Description automatically generated with medium confidence](./Readme%20Images/Aspose.Words.3bcc7811-4ccd-490b-87ee-9755dc9f822a.013.jpeg)
 
-![Chart Description automatically generated with low confidence](./Readme%20Images/Aspose.Words.3bcc7811-4ccd-490b-87ee-9755dc9f822a.014.png)When the points are near, the result of the formula is near one, and if  they are far, the result will be approached zero. It is essential to find the right value of 'σ' to decide which points should be considered similar, and this can be demonstrated on a case-by-case basis. When $\sigma=1$, $ \sigma^2 = 1$, and the RBF kernel's mathematical equation are as follows:
+![Chart Description automatically generated with low confidence](./Readme%20Images/Aspose.Words.3bcc7811-4ccd-490b-87ee-9755dc9f822a.014.png)When the points are near, the result of the formula is near one, and if  they are far, the result will be approached zero. It is essential to find the right value of 'σ' to decide which points should be considered similar, and this can be demonstrated on a case-by-case basis. When $\sigma=1$, $\sigma^2 = 1$, and the RBF kernel's mathematical equation are as follows:
 
 
 ```math
