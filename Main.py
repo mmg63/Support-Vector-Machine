@@ -2,7 +2,7 @@ from Datasets import Datasets
 from ML_Methods import ML_Methods
 
 # Path to the folder of Datasets
-FOLDER_PATH = "Assignment_2\Datasets"
+FOLDER_PATH = "Datasets/"
 
 
 if __name__ == "__main__":

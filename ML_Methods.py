@@ -8,7 +8,7 @@ from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
 
 
-PLOT_PATH = "Assignment_2/Plots/"
+PLOT_PATH = "Plots/"
 
 
 class ML_Methods:
